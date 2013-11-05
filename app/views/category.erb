@@ -1,0 +1,22 @@
+<div class="container">
+  <h1><%=params[:title]%></h1>
+  <p>Keep the economy rolling</p>
+  
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Post</th>
+    </tr>
+    <br>
+    <%@posts.each do |post|%>
+      <tr>
+        <td><%=User.find(post.user_id).name%></td>
+        <td><a href = "/post/<%=post.id%>/<%=post.title%>"><%=post.title%></a></td>
+      </tr>
+    <%end%>  
+   
+  </table>
+  <br>
+  <br>
+  <a href = "/post/new">Add a post to <%=params[:title]%>!</a>
+</div>

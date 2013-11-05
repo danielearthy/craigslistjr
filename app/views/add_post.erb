@@ -1,0 +1,25 @@
+<div class ="container">
+  <h2>Add a Post</h2>
+  <form name = "input" action ="/post/new" method = "post">
+  <input type="hidden" name="post[user_id]" value="<%=session[:id]%>">
+  <input type="hidden" name="post[category_id]" value="<%=session[:category_id]%>">
+
+  
+  <label class="label" for="Title">Title</label>
+  <input type="text" name="post[title]" placeholder="What are you selling?">
+  <br>
+
+  <label class="label" for="Description">Description</label>
+  <textarea type="text" name="post[description]" placeholder="Describe it."></textarea>
+  <br>
+
+  <label class="label" for="Price">Price</label>
+  <input type="text" name="post[price]" placeholder="How much?">
+  <br>
+
+
+
+
+  <div class ="submit"> <input type ="submit" value = "Add"> </div>
+  </form>
+</div>

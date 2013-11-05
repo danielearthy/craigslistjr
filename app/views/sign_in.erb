@@ -1,0 +1,19 @@
+<div class ="container">
+  <h3><%=flash[:password_wrong]%></h3>
+  <h3><%=flash[:goodbye]%></h3>
+  <h2>Sign In</h2>
+
+  <form name ="input" action ="/session/new" method = "post">
+  
+  <label class="label" for="email">Email</label>
+  <input type="Email" name="email" placeholder = "e.g., me@example.com">
+  <br>
+  
+  <label class="label" for="password">Password</label>
+  <input type="password" name="password" placeholder="6 or more characters">
+  <br>
+  
+  <div class = "submit"> <input type = "submit" value = "Login"> </div>
+  </form>
+  <div class = "submit"><a href = "/user/new">Not a user? Create an Account!</a></div>
+</div>
